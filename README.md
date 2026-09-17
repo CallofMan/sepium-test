@@ -76,6 +76,14 @@ docker compose up --build -d
 
 Откройте `http://localhost:8080`.
 
+Если порт `8080` занят, передайте другой порт через `APP_PORT`:
+
+```bash
+APP_PORT=18080 docker compose up --build -d
+```
+
+В этом случае откройте `http://localhost:18080`. Значение также можно записать в локальный файл `.env`; Git его не отслеживает. Пример находится в [`.env.example`](.env.example).
+
 ```bash
 docker compose exec -T web php /var/www/tests/run.php
 ```

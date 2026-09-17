@@ -25,7 +25,7 @@ services:
       DB_USER: catalog_user
       DB_PASSWORD: catalog_password
     ports:
-      - "8080:80"
+      - "${APP_PORT:-8080}:80"
     volumes:
       - ./app:/var/www/app
       - ./tests:/var/www/tests:ro
